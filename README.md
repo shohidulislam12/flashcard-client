@@ -92,7 +92,7 @@ vercel --prod
 Feel free to contribute! Open an issue or submit a pull request. 😊
 
 ---
-**Made with ❤️ by [Your Name](https://github.com/shohidulislam12)**
+**Made with ❤️ by [shohidul](https://github.com/shohidulislam12)**
 
 ## **🚀 Final Steps**
 1️⃣ **Save the file as `README.md` in your project root.**  
