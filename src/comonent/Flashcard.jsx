@@ -16,7 +16,7 @@ const FlashCard = ({ flashcard, fetchFlashcards, handleDelete }) => {
     } else {
       toast("Card moved back to the previous level 🔄");
     }
-    await axios.put(`http://localhost:3000/flashcards/${flashcard._id}`, {
+    await axios.put(`${import.meta.env.VITE_BASE_URL}/flashcards/${flashcard._id}`, {
       isCorrect,
     });
     fetchFlashcards(); // Refresh the list of flashcards
@@ -49,7 +49,7 @@ const FlashCard = ({ flashcard, fetchFlashcards, handleDelete }) => {
         {showAnswer ? "Hide Answer" : "Show Answer"}
       </button>
 
-      <div className="flex justify-between mt-4">
+      <div className="flex flex-col md:flex-row justify-between mt-4">
         <button
           className="btn btn-outline dark:text-white transition-all duration-300 hover:bg-green-500 hover:text-white"
           onClick={() => handleResponse(true)}

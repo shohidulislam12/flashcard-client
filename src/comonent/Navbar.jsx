@@ -83,11 +83,11 @@ if(loading){
               <a>Settings</a>
             </li>
            {user?.displayName&& <li>
-              <button onClick={handleLogout}>Logout</button>
+              <button className="btn btn-outline  dark:text-white" onClick={handleLogout}>Logout</button>
             </li> }
         {!user?.displayName&&
             <li >
-            <button onClick={handlelogin}> Login <span><FaGoogle /></span></button>
+            <button className="btn btn-outline dark:text-white" onClick={handlelogin}> Login <span className=" dark:text-white"><FaGoogle /></span></button>
           </li>}
           </ul>
         </div>

@@ -53,7 +53,7 @@ const FlashCards = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         const result = await axios.delete(
-          `http://localhost:3000/flashcards/${id}`
+          `${import.meta.env.VITE_BASE_URL}/flashcards/${id}`
         );
         console.log(result);
         fetchFlashcards();
@@ -110,14 +110,16 @@ const FlashCards = () => {
         <div className="">
           {flashcards.length === 0 ? (
             <div className="flex items-center ">
-              <p className="text-white font-bold p-10 text-center">
-                No flashcards for Today{" "}
+              <p className="text-black dark:text-white font-bold p-10 text-center">
+              You have No flashcards due today!
               </p>
             </div>
           ) : (
-            ""
+      <p> {
+        `You have ${flashcards.length} flashcards due today! 📚` }</p>
           )}
           {flashcards.map((flashcard) => (
+
             <FlashCard
               key={flashcard._id}
               handleDelete={handleDelete}
